@@ -76,7 +76,7 @@ body {
 }
 .head {
     color: #003147;
-    background: coral;
+    background: rgb(255, 255, 255);
     grid-area: head;
     display: grid;
     grid-template-areas:
