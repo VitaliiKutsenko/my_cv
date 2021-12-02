@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 13pt;
+}
+h2 {
+    font-size: 18pt;
+}
+body {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    position: relative;
+    max-width: 21cm;
+    max-height: 29.7cm;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: "head body";
+    grid-template-rows: 100%;
+    grid-template-columns: 3fr 5fr;
+}
+@media (max-width: 860px) {
+    .wrapper {
+        grid-template-areas: "head" "body";
+        grid-template-columns: 1fr;
+    }
+    .head {
+        color: #003147;
+        background: coral;
+        grid-area: head;
+        display: grid;
+        grid-template-areas:
+            "photo"
+            "about"
+            "contact"
+            "education"
+            "language";
+        grid-template-rows: 1fr 100px 200px 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .education {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-area: education;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media print {
+    @page {
+        size: auto; /* auto is the initial value */
+        margin: 0mm; /* this affects the margin in the printer settings */
+    }
+
+    .wrapper {
+        width: 21cm;
+        min-height: 29.7cm;
+        padding: 0 1cm;
+        border: 1px #d3d3d3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+}
+.head {
+    color: #003147;
+    background: coral;
+    grid-area: head;
+    display: grid;
+    grid-template-areas:
+        "photo"
+        "about"
+        "contact"
+        "education"
+        "language";
+    grid-template-rows: 1fr 100px 200px 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* --------------------------------profile img */
+.photo {
+    grid-area: photo;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame {
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.frame img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+/* --------------------------------contact */
+.contactInfo {
+    width: 100%;
+    display: flex;
+    grid-area: contact;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-items: center; */
+}
+.contact li {
+    font-size: 11pt;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    /* color: rgb(12, 46, 46); */
+}
+.contact li img {
+    margin: 0px 10px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 50px;
+}
+.contact li img:hover {
+    backdrop-filter: sepia(50%);
+    transform: scale(1.7, 1.7);
+    transition: 0.3s ease-in-out;
+}
+/* --------------------------------Education */
+.education {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* padding: 0 30px; */
+    grid-area: education;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* box-shadow: 2px 2px 5px -1px rgb(235, 228, 228); */
+}
+.education h2 {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+}
+.education_info {
+    border-top: 5px solid coral;
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+    text-align: justify;
+    width: 100%;
+}
+.education_info span {
+    /* text-align: center; */
+    display: block;
+    padding: 5px 0;
+}
+/* --------------------------------about me */
+.aboutMySelf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.language {
+    grid-area: language;
+}
+.language_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.language_wrap {
+    list-style: none;
+    display: block;
+}
+.language_wrap li {
+}
+.language_range {
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: 10px;
+    box-shadow: 1px 1px 7px -1px black;
+    border-radius: 10px;
+    background: rgba(219, 209, 209, 0.61);
+}
+.range1:after {
+    border-radius: 10px;
+    content: "";
+    width: 40%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}
+.range2:after {
+    border-radius: 10px;
+    content: "";
+    width: 80%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}
+.range3:after {
+    border-radius: 10px;
+    content: "";
+    width: 60%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}
+/* --------------------------------body */
+.main__body {
+    line-height: 1.5em;
+    position: relative;
+    grid-area: body;
+    display: grid;
+    grid-template-areas:
+        "skills"
+        "employment"
+        "soft"
+        "books"
+        "language";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --------------------------------SKILLS STYLE */
+.skills {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: skills;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px -1px rgb(235, 228, 228);
+}
+.skills h2 {
+    text-transform: uppercase;
+}
+.stack_technology {
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid coral;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    width: 100%;
+}
+.skills li {
+    font-size: 16px;
+    display: inline-block;
+    box-shadow: 1px 1px 5px -3px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
+    padding: 4px;
+    margin: 3px 0;
+}
+
+/* --------------------------------employment */
+.employment {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: employment;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px -1px rgb(235, 228, 228);
+}
+.employment h2 {
+    text-transform: uppercase;
+}
+.wrapp_employment {
+    border-top: 5px solid coral;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.employment li {
+    background: linear-gradient(to right, rgba(255, 127, 80, 0.13), white 90%);
+    margin: 5px 5px 5px 20px;
+    list-style: none;
+}
+.employment li::before {
+    margin-right: 10px;
+    content: "\2022";
+    font-weight: 900;
+    display: inline-block;
+    color: tomato;
+    margin-left: -1em;
+}
+.employment span {
+    display: block;
+}
+.ltd span:nth-child(1) {
+    /* background: blue; */
+    font-size: 16pt;
+    font-weight: bold;
+}
+.ltdspan:nth-child(2) {
+    font-size: 13pt;
+    font-weight: bold;
+}
+.location {
+    display: flex;
+    justify-content: space-between;
+}
+.manager {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+}
+/* ------------------------------books */
+.soft-skills {
+    grid-area: soft;
+}
+.books {
+    grid-area: books;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: employment;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px -1px rgb(235, 228, 228);
+}
+.books ul {
+    border-top: 5px solid coral;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    width: 100%;
+    list-style: none;
+}
+.books ul li {
+    font-size: 12pt;
+    display: inline-block;
+    box-shadow: 1px 1px 5px -3px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
+    padding: 4px;
+    margin: 3px 0;
+}
