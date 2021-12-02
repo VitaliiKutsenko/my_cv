@@ -9,7 +9,7 @@ h2 {
     font-size: 18pt;
 }
 body {
-    background: lightblue;
+    background: radial-gradient(purple, cyan);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,13 +75,15 @@ body {
     }
 
     .wrapper {
-        width: 21cm;
-        min-height: 29.7cm;
-        padding: 0 1cm;
-        border: 1px #d3d3d3 solid;
-        border-radius: 5px;
-        background: white;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        max-width: 21cm;
+        max-height: 29.7cm;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: grid;
+        grid-template-areas: "head body";
+        grid-template-rows: 100%;
+        grid-template-columns: 3fr 5fr;
     }
 }
 .head {
@@ -95,7 +97,7 @@ body {
         "contact"
         "education"
         "language";
-    grid-template-rows: 2fr 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     /* gap: 20px; */

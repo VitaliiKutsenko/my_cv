@@ -24,7 +24,7 @@
         rgba(184, 184, 192, 0.589)
     );
     border-image-slice: 1;
-    text-align: justify;
+    /* text-align: center; */
     width: 100%;
 }
 .education_info span {

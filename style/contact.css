@@ -37,10 +37,10 @@
     display: block;
     width: 25px;
     height: 25px;
-    background-size: 50px;
+    image-resolution: 25px;
 }
 .contact li img:hover {
-    backdrop-filter: sepia(50%);
-    transform: scale(1.7, 1.7);
-    transition: 0.3s ease-in-out;
+    /* backdrop-filter: sepia(50%); */
+    /* transform: scale(1.7, 1.7);
+    transition: 0.3s ease-in-out; */
 }
