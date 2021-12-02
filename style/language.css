@@ -1,0 +1,66 @@
+.language {
+    width: 100%;
+    height: 100%;
+    grid-area: language;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.language h2 {
+    background: linear-gradient(to right, rgb(245, 245, 245), white);
+    padding: 10px 0px 10px 20px;
+}
+.language_wrap {
+    padding: 0 20px;
+    border-top: 5px solid skyblue;
+    border-image: linear-gradient(
+        to right,
+        rgba(184, 184, 192, 0.26),
+        rgba(184, 184, 192, 0.589)
+    );
+    border-image-slice: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.language_wrap {
+    list-style: none;
+    display: block;
+}
+.language_wrap li {
+}
+.language_range {
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: 10px;
+    box-shadow: 1px 1px 7px -1px black;
+    border-radius: 10px;
+    background: rgba(219, 209, 209, 0.61);
+}
+.range1:after {
+    border-radius: 10px;
+    content: "";
+    width: 40%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}
+.range2:after {
+    border-radius: 10px;
+    content: "";
+    width: 80%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}
+.range3:after {
+    border-radius: 10px;
+    content: "";
+    width: 60%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.651);
+    position: absolute;
+}

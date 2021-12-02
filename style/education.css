@@ -1,0 +1,33 @@
+/* --------------------------------Education */
+.education {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: education;
+}
+.education h2 {
+    padding: 10px 0px 10px 20px;
+    display: block;
+    width: 100%;
+    background: linear-gradient(to right, rgb(245, 245, 245), white);
+}
+.education_info {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 5px solid skyblue;
+    border-image: linear-gradient(
+        to right,
+        rgba(184, 184, 192, 0.26),
+        rgba(184, 184, 192, 0.589)
+    );
+    border-image-slice: 1;
+    text-align: justify;
+    width: 100%;
+}
+.education_info span {
+    display: block;
+    padding: 5px 0;
+}
