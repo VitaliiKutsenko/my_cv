@@ -14,13 +14,7 @@
     width: 100%;
     height: 100%;
     padding: 0 20px;
-    border-top: 5px solid skyblue;
-    border-image: linear-gradient(
-        to right,
-        rgba(184, 184, 192, 0.26),
-        rgba(184, 184, 192, 0.589)
-    );
-    border-image-slice: 1;
+    border-top: 5px solid rgba(184, 184, 192, 0.589);
     display: flex;
     flex-direction: column;
     list-style: none;

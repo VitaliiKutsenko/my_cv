@@ -17,14 +17,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    border-top: 5px solid skyblue;
-    border-image: linear-gradient(
-        to right,
-        rgba(184, 184, 192, 0.26),
-        rgba(184, 184, 192, 0.589)
-    );
-    border-image-slice: 1;
-    /* text-align: center; */
+    border-top: 5px solid rgba(184, 184, 192, 0.589);
     width: 100%;
 }
 .education_info span {
