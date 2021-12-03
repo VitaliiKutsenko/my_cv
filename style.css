@@ -162,22 +162,22 @@
 .stack_technology {
     width: 100%;
     height: 100%;
+    padding: 0 10px 0 20px;
     border-top: 5px solid rgba(184, 184, 192, 0.589);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
+    align-content: center;
     list-style: none;
 }
+
 .skills li {
+    flex-grow: 1;
     font-size: 16px;
-    display: inline-block;
-    box-shadow: 1px 1px 5px -3px;
+    box-shadow: inset 1px 0px 15px 5px rgba(224, 224, 224, 0.932);
     border-radius: 5px;
-    background: radial-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
-    padding: 4px 8px;
-    margin: 5px 5px;
+    padding: 5px;
+    margin: 3px;
 }
 
 /* --------------------------------employment */
@@ -294,6 +294,7 @@
     box-sizing: border-box;
     font-size: 12pt;
     line-height: 1.3em;
+    color: #003147;
 }
 h2 {
     font-size: 17pt;
@@ -410,17 +411,18 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
+        /* justify-content: flex-start; */
+        /* align-content: space-around; */
         list-style: none;
-        padding: 0 20px;
+        /* padding: 0 20px; */
     }
     .skills li {
+        text-align: center;
         font-size: 16px;
         box-shadow: 1px 1px 5px -3px;
         border-radius: 5px;
         background: radial-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
-        margin: 10px;
+        margin: 3px;
     }
     .wrapp_employment {
         width: 100%;
@@ -444,6 +446,7 @@ body {
 }
 @media print {
     @page {
+        padding: ;
         size: auto; /* auto is the initial value */
         margin: 0mm; /* this affects the margin in the printer settings */
     }
