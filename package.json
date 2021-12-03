@@ -1,24 +1,40 @@
 {
-  "name": "vitalii89",
-  "version": "1.0.0",
-  "description": "resume css html",
-  "main": "index.html",
-  "scripts": {
-    "test": "run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VitaliiKutsenko/myResume.git"
-  },
-  "keywords": [
-    "css",
-    "html",
-    "resume"
-  ],
-  "author": "Vitalii89",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VitaliiKutsenko/myResume/issues"
-  },
-  "homepage": "https://github.com/VitaliiKutsenko/myResume#readme"
+    "name": "vitalii89",
+    "version": "1.0.0",
+    "description": "resume css html",
+    "main": "index.html",
+    "scripts": {
+        "test": "run",
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VitaliiKutsenko/myResume.git"
+    },
+    "keywords": [
+        "css",
+        "html",
+        "resume"
+    ],
+    "author": "Vitalii89",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VitaliiKutsenko/myResume/issues"
+    },
+    "homepage": "https://github.com/VitaliiKutsenko/myResume#readme",
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^10.0.0",
+        "css-loader": "^6.5.1",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.4.5",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.64.4",
+        "webpack-cli": "^4.9.1"
+    },
+    "dependencies": {
+        "unused-files-webpack-plugin": "^3.4.0"
+    }
 }

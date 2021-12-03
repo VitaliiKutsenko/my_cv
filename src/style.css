@@ -1,0 +1,154 @@
+@import "./style.css";
+@import "./style/photo.css";
+@import "./style/contact.css";
+@import "./style/education.css";
+@import "./style/language.css";
+@import "./style/skills.css";
+@import "./style/employments.css";
+@import "./style/books.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 13pt;
+}
+h2 {
+    font-size: 18pt;
+}
+body {
+    background: radial-gradient(purple, cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    position: relative;
+    max-width: 21cm;
+    max-height: 29.7cm;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: "head body";
+    grid-template-rows: 100%;
+    grid-template-columns: 3fr 5fr;
+}
+@media (max-width: 860px) {
+    .wrapper {
+        grid-template-areas: "head" "body";
+        grid-template-columns: 1fr;
+    }
+    .head {
+        color: #003147;
+        background: linear-gradient(to right, rgb(184, 184, 192), white);
+
+        grid-area: head;
+        display: grid;
+        grid-template-areas:
+            "photo"
+            "about"
+            "contact"
+            "education"
+            "language";
+        grid-template-rows: 1fr 100px 200px 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .education {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-area: education;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    ul.language_wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    ul.language_wrap li {
+        display: block;
+        width: 90%;
+    }
+}
+@media print {
+    @page {
+        size: auto; /* auto is the initial value */
+        margin: 0mm; /* this affects the margin in the printer settings */
+    }
+
+    .wrapper {
+        position: relative;
+        max-width: 21cm;
+        max-height: 29.7cm;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: grid;
+        grid-template-areas: "head body";
+        grid-template-rows: 100%;
+        grid-template-columns: 3fr 5fr;
+    }
+}
+.head {
+    color: #003147;
+    background: linear-gradient(to right, rgb(226, 226, 235), white);
+    grid-area: head;
+    display: grid;
+    grid-template-areas:
+        "photo"
+        "about"
+        "contact"
+        "education"
+        "language";
+    grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+    /* padding: 0 20px; */
+}
+
+/* --------------------------------about me */
+.aboutMySelf {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.aboutMySelf h1 {
+    font-size: 18pt;
+    /* margin-bottom: 15px; */
+}
+/* --------------------------------body */
+.main__body {
+    line-height: 1.5em;
+    position: relative;
+    grid-area: body;
+    display: grid;
+    grid-template-areas:
+        "skills"
+        "employment"
+        "soft"
+        "books"
+        "language";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ------------------------------books */
+.soft-skills {
+    grid-area: soft;
+}
