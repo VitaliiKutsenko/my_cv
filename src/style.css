@@ -12,10 +12,11 @@
     padding: 0;
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
-    font-size: 13pt;
+    font-size: 12pt;
+    line-height: 1.3em;
 }
 h2 {
-    font-size: 18pt;
+    font-size: 17pt;
 }
 body {
     background: radial-gradient(purple, cyan);
@@ -34,67 +35,7 @@ body {
     grid-template-rows: 100%;
     grid-template-columns: 3fr 5fr;
 }
-@media (max-width: 860px) {
-    .wrapper {
-        grid-template-areas: "head" "body";
-        grid-template-columns: 1fr;
-    }
-    .head {
-        color: #003147;
-        background: linear-gradient(to right, rgb(184, 184, 192), white);
 
-        grid-area: head;
-        display: grid;
-        grid-template-areas:
-            "photo"
-            "about"
-            "contact"
-            "education"
-            "language";
-        grid-template-rows: 1fr 100px 200px 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-    }
-    .education {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        grid-area: education;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    ul.language_wrap {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-    ul.language_wrap li {
-        display: block;
-        width: 90%;
-    }
-}
-@media print {
-    @page {
-        size: auto; /* auto is the initial value */
-        margin: 0mm; /* this affects the margin in the printer settings */
-    }
-
-    .wrapper {
-        position: relative;
-        max-width: 21cm;
-        max-height: 29.7cm;
-        margin: 0 auto;
-        border: 1px solid black;
-        display: grid;
-        grid-template-areas: "head body";
-        grid-template-rows: 100%;
-        grid-template-columns: 3fr 5fr;
-    }
-}
 .head {
     color: #003147;
     background: linear-gradient(to right, rgb(226, 226, 235), white);
@@ -109,8 +50,6 @@ body {
     grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    /* gap: 20px; */
-    /* padding: 0 20px; */
 }
 
 /* --------------------------------about me */
@@ -124,12 +63,9 @@ body {
     align-items: flex-start;
 }
 .aboutMySelf h1 {
-    font-size: 18pt;
-    /* margin-bottom: 15px; */
 }
 /* --------------------------------body */
 .main__body {
-    line-height: 1.5em;
     position: relative;
     grid-area: body;
     display: grid;
@@ -141,14 +77,105 @@ body {
         "language";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
-    background-color: rgb(255, 255, 255);
+    background: white;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    /* gap: 20px; */
+    padding-left: 20px;
 }
 
 /* ------------------------------books */
 .soft-skills {
     grid-area: soft;
+}
+@media (max-width: 760px) {
+    .wrapper {
+        border: none;
+        grid-template-areas: "head" "body";
+        grid-template-columns: 1fr;
+    }
+    .head {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .main__body {
+        background: linear-gradient(to right, rgb(226, 226, 235), white);
+        padding: 0;
+        grid-template-rows: repeat(5, 0.5fr);
+    }
+    .education {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    ul.language_wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    ul.language_wrap li {
+        display: block;
+        width: 90%;
+    }
+    .skills h2 {
+        background: linear-gradient(to right, rgb(245, 245, 245), white);
+        padding: 10px 0px 10px 20px;
+    }
+
+    .stack_technology {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        list-style: none;
+        padding: 0 20px;
+    }
+    .skills li {
+        font-size: 16px;
+        box-shadow: 1px 1px 5px -3px;
+        border-radius: 5px;
+        background: radial-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
+        margin: 10px;
+    }
+    .wrapp_employment {
+        width: 100%;
+        height: 100%;
+        border-top: 5px solid rgba(184, 184, 192, 0.589);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style: none;
+        padding: 10px 20px;
+    }
+    .manager {
+        padding: 0;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+    }
+    .engineer {
+        padding: 0;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+    }
+}
+@media print {
+    @page {
+        size: auto; /* auto is the initial value */
+        margin: 0mm; /* this affects the margin in the printer settings */
+    }
+    .wrapper {
+        position: relative;
+        max-width: 21cm;
+        max-height: 29.7cm;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: grid;
+        grid-template-areas: "head body";
+        grid-template-rows: 100%;
+        grid-template-columns: 3fr 5fr;
+    }
 }
