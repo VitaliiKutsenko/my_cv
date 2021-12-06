@@ -54,11 +54,6 @@
     height: 25px;
     image-resolution: 25px;
 }
-.contact li img:hover {
-    /* backdrop-filter: sepia(50%); */
-    /* transform: scale(1.7, 1.7);
-    transition: 0.3s ease-in-out; */
-}
 
 /* --------------------------------Education */
 .education {
@@ -115,7 +110,7 @@
     margin-bottom: 20px;
     width: 80%;
     height: 20px;
-    box-shadow: 1px 1px 1px 0px black;
+    box-shadow: 0px 0px 5px -1px rgb(139, 143, 230);
     border-radius: 5px;
     background: rgb(255, 255, 255);
 }
@@ -124,9 +119,7 @@
     content: "";
     width: 40%;
     height: 20px;
-    /* border: 1px solid black; */
-    box-shadow: inset 2px 2px 20px 2px #003047c0;
-    /* background: linear-gradient(to right, #00304741, #003047c0); */
+    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
     position: absolute;
 }
 .range2:after {
@@ -134,7 +127,7 @@
     content: "";
     width: 80%;
     height: 20px;
-    box-shadow: inset 2px 2px 20px 2px #003047c0;
+    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
     position: absolute;
 }
 .range3:after {
@@ -142,7 +135,7 @@
     content: "";
     width: 60%;
     height: 20px;
-    box-shadow: inset 2px 2px 20px 2px #003047c0;
+    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
     position: absolute;
 }
 
@@ -162,8 +155,8 @@
 .stack_technology {
     width: 100%;
     height: 100%;
-    padding: 0 10px 0 20px;
-    border-top: 5px solid rgba(184, 184, 192, 0.589);
+    padding: 10px 10px 10px 20px;
+    border-top: 5px solid rgba(184, 184, 192, 0.219);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -174,7 +167,7 @@
 .skills li {
     flex-grow: 1;
     font-size: 16px;
-    box-shadow: inset 1px 0px 15px 5px rgba(224, 224, 224, 0.932);
+    box-shadow: inset 0px 0px 15px 1px rgba(180, 182, 187, 0.267);
     border-radius: 5px;
     padding: 5px;
     margin: 3px;
@@ -196,7 +189,7 @@
 .wrapp_employment {
     width: 100%;
     height: 100%;
-    border-top: 5px solid rgba(184, 184, 192, 0.589);
+    border-top: 5px solid rgba(184, 184, 192, 0.219);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -223,7 +216,6 @@
     width: 50px;
     height: 50px;
     object-fit: cover;
-    /* position: absolute; */
     right: 0;
 }
 .ltd {
@@ -252,39 +244,69 @@
 }
 
 .books {
-    grid-area: books;
-    position: relative;
     width: 100%;
     height: 100%;
-    grid-area: employment;
+    grid-area: books;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
-    box-shadow: 2px 2px 5px -1px rgb(235, 228, 228);
+    justify-content: flex-start;
+}
+.books h2 {
+    background: linear-gradient(to left, rgb(245, 245, 245), white);
+    padding: 10px 0px 10px 20px;
 }
 .books ul {
-    border-top: 5px solid skyblue;
-    border-image: linear-gradient(
-        to right,
-        rgba(184, 184, 192, 0.589),
-        rgba(184, 184, 192, 0)
-    );
-    border-image-slice: 1;
-    margin-top: 10px;
-    padding-top: 10px;
-    text-align: justify;
     width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 20px;
+    border-top: 5px solid rgba(184, 184, 192, 0.219);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
     list-style: none;
 }
 .books ul li {
-    font-size: 12pt;
-    display: inline-block;
-    box-shadow: 1px 1px 5px -3px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 16px;
+    box-shadow: inset 0px 0px 15px 1px rgba(180, 182, 187, 0.267);
     border-radius: 5px;
-    background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));
-    padding: 4px;
-    margin: 3px 0;
+    padding: 5px;
+    margin: 3px;
+}
+
+.hobbie {
+    width: 100%;
+    height: 100%;
+    grid-area: hobbie;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.hobbie h2 {
+    background: linear-gradient(to left, rgb(245, 245, 245), white);
+    padding: 10px 0px 10px 20px;
+}
+.hobbie ul {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 20px;
+    border-top: 5px solid rgba(184, 184, 192, 0.219);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style: none;
+}
+.hobbie ul li {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 16px;
+    box-shadow: inset 0px 0px 15px 1px rgba(180, 182, 187, 0.267);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
 }
 
 * {
@@ -355,13 +377,12 @@ body {
         "employment"
         "soft"
         "books"
-        "language";
+        "hobbie";
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 1fr repeat(2, 2fr) repeat(2, 1fr);
     background: white;
     justify-content: center;
     align-items: center;
-    /* gap: 20px; */
     padding-left: 20px;
 }
 
@@ -411,10 +432,7 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        /* justify-content: flex-start; */
-        /* align-content: space-around; */
         list-style: none;
-        /* padding: 0 20px; */
     }
     .skills li {
         text-align: center;
@@ -446,7 +464,6 @@ body {
 }
 @media print {
     @page {
-        padding: ;
         size: auto; /* auto is the initial value */
         margin: 0mm; /* this affects the margin in the printer settings */
     }
