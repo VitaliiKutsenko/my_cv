@@ -119,7 +119,7 @@
     content: "";
     width: 40%;
     height: 20px;
-    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
+    box-shadow: inset 0px 0px 15px 1px rgba(81, 99, 148, 0.87);
     position: absolute;
 }
 .range2:after {
@@ -127,7 +127,7 @@
     content: "";
     width: 80%;
     height: 20px;
-    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
+    box-shadow: inset 0px 0px 15px 1px rgba(81, 99, 148, 0.87);
     position: absolute;
 }
 .range3:after {
@@ -135,7 +135,7 @@
     content: "";
     width: 60%;
     height: 20px;
-    box-shadow: inset 0px 0px 15px 1px rgba(166, 186, 235, 0.788);
+    box-shadow: inset 0px 0px 15px 1px rgba(81, 99, 148, 0.87);
     position: absolute;
 }
 
