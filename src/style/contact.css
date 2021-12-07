@@ -1,0 +1,34 @@
+/* --------------------------------contact */
+.contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-area: contact;
+}
+.contactInfo h2 {
+    padding: 10px 0px 10px 20px;
+    background: linear-gradient(to right, rgb(245, 245, 245), white);
+}
+.contact {
+    padding: 0 20px;
+    border-top: 5px solid rgba(184, 184, 192, 0.589);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact li {
+    font-size: 11pt;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contact li img {
+    margin: 0px 10px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    image-resolution: 25px;
+}
