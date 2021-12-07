@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/VitaliiKutsenko/myResume.git"
+        "url": "git+https://github.com/VitaliiKutsenko/my_cv.git"
     },
     "keywords": [
         "css",
@@ -22,9 +22,9 @@
     "author": "Vitalii89",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/VitaliiKutsenko/myResume/issues"
+        "url": "https://github.com/VitaliiKutsenko/my_cv/issues"
     },
-    "homepage": "https://github.com/VitaliiKutsenko/myResume#readme",
+    "homepage": "https://github.com/VitaliiKutsenko/my_cv#readme",
     "devDependencies": {
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^10.0.0",
