@@ -356,6 +356,14 @@ template {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.cube {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
 }
 .frame {
     border-radius: 50%;
@@ -378,7 +386,7 @@ template {
     grid-area: contact;
 }
 .contactInfo h2 {
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
     background: linear-gradient(to right, rgb(245, 245, 245), white);
 }
 .contact {
@@ -431,24 +439,31 @@ template {
     height: 100%;
     grid-area: education;
 }
-.education h2 {
-    padding: 10px 0px 10px 20px;
+/* .education h2 {
+    padding: 5px 0px 5px 20px;
     display: block;
     width: 100%;
     background: linear-gradient(to right, rgb(245, 245, 245), white);
-}
+} */
 .education_info {
     padding: 0 20px;
     display: flex;
+    flex-direction: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    justify-content: space-between;
-    border-top: 5px solid rgba(184, 184, 192, 0.589);
+    /* text-align: center; */
+    /* border-top: 5px solid rgba(184, 184, 192, 0.589); */
     width: 100%;
 }
 .education_info span {
     display: block;
     padding: 5px 0;
+    font-size: 12pt;
+}
+.education_info :nth-child(1) {
+    text-align: center;
+    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.425);
 }
 
 .language {
@@ -461,12 +476,12 @@ template {
 }
 .language h2 {
     background: linear-gradient(to right, rgb(245, 245, 245), white);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
 }
 .language_wrap {
     width: 100%;
     height: 100%;
-    padding: 5px 20px;
+    padding: 0px 20px;
     border-top: 5px solid rgba(184, 184, 192, 0.589);
     display: flex;
     flex-direction: column;
@@ -474,15 +489,16 @@ template {
 }
 .language_wrap li {
     font-weight: 550;
+    margin-top: 5px;
 }
 
 .language_range {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     width: 80%;
-    height: 20px;
+    height: 15px;
     box-shadow: 0px 0px 5px -1px rgb(139, 143, 230);
     border-radius: 5px;
     background: rgb(255, 255, 255);
@@ -491,24 +507,24 @@ template {
     border-radius: 5px;
     content: "";
     width: 40%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #1b5480b4;
+    height: 15px;
+    box-shadow: inset 0px 0px 15px 5px #04245fdc;
     position: absolute;
 }
 .range2:after {
     border-radius: 5px;
     content: "";
     width: 80%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #1b5480b4;
+    height: 15px;
+    box-shadow: inset 0px 0px 15px 5px #04245fdc;
     position: absolute;
 }
 .range3:after {
     border-radius: 5px;
     content: "";
     width: 60%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #1b5480b4;
+    height: 15px;
+    box-shadow: inset 0px 0px 15px 5px #04245fdc;
     position: absolute;
 }
 
@@ -523,7 +539,7 @@ template {
 }
 .skills h2 {
     background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
 }
 .stack_technology {
     width: 100%;
@@ -557,7 +573,7 @@ template {
 }
 .employment h2 {
     background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
 }
 .wrapp_employment {
     width: 100%;
@@ -568,7 +584,6 @@ template {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 10px;
-    list-style: none;
 }
 .employment li {
     margin: 0px 0px 0px 20px;
@@ -603,22 +618,16 @@ template {
 }
 .ltd span:nth-child(2) {
     font-size: 10pt;
-    color: rgba(26, 26, 134, 0.842);
+    color: rgb(7, 110, 110);
     font-weight: bold;
 }
-.location {
-    padding-top: 5px;
-    color: rgb(7, 110, 110);
-    display: flex;
-    justify-content: space-between;
-}
+
 .manager {
     padding: 10px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.425);
 }
 .engineer {
     padding: 10px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
 }
 
 .hobbie {
@@ -631,7 +640,7 @@ template {
 }
 .hobbie h2 {
     background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
 }
 .hobbie ul {
     width: 100%;
@@ -655,6 +664,66 @@ template {
     margin: 3px;
 }
 
+.soft_skills {
+    width: 100%;
+    height: 100%;
+    grid-area: soft;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.soft_skills h2 {
+    background: linear-gradient(to left, rgb(245, 245, 245), white);
+    padding: 5px 0px 5px 20px;
+}
+.soft_wrapp {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 20px;
+    border-top: 5px solid rgba(184, 184, 192, 0.219);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    list-style: none;
+}
+.soft_wrapp ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 1px rgba(187, 187, 187, 0.411);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.soft_wrapp ul span {
+    box-shadow: 0px 0px 2px 1px rgba(187, 187, 187, 0.411);
+    display: inline-flex;
+    width: max-content;
+    padding: 0 2px;
+    flex-wrap: nowrap;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    background: white;
+    border-radius: 5px;
+}
+.soft_wrapp li {
+    margin: 0px 0px 0px 20px;
+    list-style: none;
+}
+.soft_wrapp li::before {
+    margin-right: 10px;
+    content: "\2022";
+    font-weight: 900;
+    display: inline-block;
+    color: rgb(184, 177, 175);
+    margin-left: -1em;
+}
+.soft_skills ul li {
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -665,8 +734,14 @@ template {
     color: #003147;
 }
 h2 {
+    display: block;
+    background: rgba(255, 255, 255, 0.795);
     font-size: 17pt;
 }
+.element {
+    position: relative;
+}
+
 body {
     background: radial-gradient(purple, cyan);
     display: flex;
@@ -684,10 +759,22 @@ body {
     grid-template-rows: 100%;
     grid-template-columns: 3fr 5fr;
 }
-
+.location {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.location span {
+    color: rgb(7, 110, 110);
+    font-size: 10pt;
+    font-weight: bold;
+}
 .head {
+    position: relative;
     color: #003147;
-    background: linear-gradient(to right, rgb(226, 226, 235), white);
+    background: linear-gradient(to right, rgb(235, 226, 230), white);
     grid-area: head;
     display: grid;
     grid-template-areas:
@@ -699,6 +786,18 @@ body {
     grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
+    /* padding-right: 20px; */
+    /* column-gap: 20px; */
+    z-index: -2;
+}
+.cube {
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 /* --------------------------------about me */
@@ -722,14 +821,12 @@ body {
         "skills"
         "employment"
         "soft"
-        "books"
         "hobbie";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr repeat(2, 2fr) repeat(2, 1fr);
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
     background: white;
     justify-content: center;
     align-items: center;
-    padding-left: 20px;
 }
 
 /* ------------------------------books */
@@ -753,13 +850,6 @@ body {
         padding: 0;
         grid-template-rows: repeat(5, 0.5fr);
     }
-    .education {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
     ul.language_wrap {
         display: flex;
         align-items: flex-start;
@@ -771,7 +861,7 @@ body {
     }
     .skills h2 {
         background: linear-gradient(to right, rgb(245, 245, 245), white);
-        padding: 10px 0px 10px 20px;
+        padding: 5px 0px 5px 20px;
     }
 
     .stack_technology {
@@ -806,6 +896,9 @@ body {
     .engineer {
         padding: 0;
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+    }
+    .soft_wrapp ul span {
+        background: linear-gradient(to right, rgb(245, 245, 245), white 10%);
     }
 }
 @media print {
