@@ -9,7 +9,7 @@
 }
 .employment h2 {
     background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 20px;
 }
 .wrapp_employment {
     width: 100%;
@@ -20,7 +20,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 10px;
-    list-style: none;
 }
 .employment li {
     margin: 0px 0px 0px 20px;
@@ -55,20 +54,14 @@
 }
 .ltd span:nth-child(2) {
     font-size: 10pt;
-    color: rgba(26, 26, 134, 0.842);
+    color: rgb(7, 110, 110);
     font-weight: bold;
 }
-.location {
-    padding-top: 5px;
-    color: rgb(7, 110, 110);
-    display: flex;
-    justify-content: space-between;
-}
+
 .manager {
     padding: 10px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
+    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.425);
 }
 .engineer {
     padding: 10px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
 }

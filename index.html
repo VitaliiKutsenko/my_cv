@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link rel="stylesheet" href="style.css" /> -->
   <link rel="icon" href="./src/icon/favicon.ico" type="image/icon">  <title>CV</title>
 </head>
 
@@ -15,10 +15,13 @@
   <div class="wrapper">
     <header class="head">
       <div class="education">
-        <h2>Education</h2>
+        <h2 class="element">Education</h2>
         <div class="education_info">
           <span>Kharkiv humanitarian-pedagogical institute</span>
-          <span>Department of Physical Education and Sports Improvement</span>
+          <span>Department: Physical education and sports improvement</span>
+          <span>Education level: Specialist</span>
+        </div>
+        <div class="location"> 
           <span>09/2004 - 06/2010</span>
           <span>Kharkiv, Ukraine</span>
         </div>
@@ -32,7 +35,7 @@
         <div class="frame"><img src="#" alt="my photo" /></div>
       </div>
       <div class="contactInfo">
-        <h2>Contact info</h2>
+        <h2 class="element">Contact info</h2>
         <ul class="contact">
           <li id="mail">
             <a target="blank" href="mailto:vitalii.kutsenko89@gmail.com?subject=Тема&amp;body=Текст">
@@ -48,7 +51,7 @@
           </li>
           <li id="location">
             <a href="https://www.google.com/maps/@49.9524638,36.3178618,13.67z" target="blank"><img src="#" data-contact = 'location' alt="location" />
-            <span>Kharkiv, Ukarine</span>
+            <span>Kharkiv, Ukraine</span>
             </a>
             
           </li>
@@ -66,7 +69,7 @@
         </ul>
       </div>
       <div class="language">
-        <h2>Language</h2>
+        <h2 class="element">Language</h2>
         <ul class="language_wrap">
           <li>English
             <div class="language_range range1"><span></span></div>
@@ -79,11 +82,12 @@
           </li>
         </ul>
       </div>
+      
     </header>
     <!-- -------------body resume -->
     <main class="main__body">
       <div class="skills">
-        <h2>Skills</h2>
+        <h2 class="element">Skills</h2>
         <ul class="stack_technology">
           <li>JavaScript(ES6)</li>
           <li>React</li>
@@ -104,7 +108,7 @@
         </ul>
       </div>
       <div class="employment">
-        <h2>Employment</h2>
+        <h2 class="element">Employment</h2>
         <div class="wrapp_employment">
           <div class="manager">
             <div class="ltd">
@@ -137,9 +141,33 @@
           </div>
         </div>
       </div>
-      <div class="soft_skills"></div>
+      <div class="soft_skills">
+        <h2 class="element">Soft skills</h2>
+          <div class="soft_wrapp">
+            <ul> 
+              <span>Communicative</span>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul> 
+              <span>Responsible</span>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul>
+              <span>Eager to learn</span>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul> 
+              <span>Proactive</span>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
+      </div>
       <div class="hobbie">
-        <h2>Hobbie</h2>
+        <h2 class="element">Hobbie</h2>
         <ul>
           <li>cooking</li>
           <li>learning</li>
@@ -147,7 +175,6 @@
           <li>billiard</li>
           <li>board game</li>
           <li>skating</li>
-          
           <li>logical tasks</li>
         </ul>
       </div>
