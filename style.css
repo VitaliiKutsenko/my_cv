@@ -774,7 +774,11 @@ body {
 .head {
     position: relative;
     color: #003147;
-    background: linear-gradient(to right, rgb(235, 226, 230), white);
+    background: linear-gradient(
+        to right,
+        rgb(216, 216, 216),
+        rgb(255, 255, 255)
+    );
     grid-area: head;
     display: grid;
     grid-template-areas:
@@ -797,7 +801,7 @@ body {
     right: 0;
     bottom: 0;
     position: absolute;
-    z-index: -1;
+    /* z-index: 11; */
 }
 
 /* --------------------------------about me */
@@ -827,6 +831,7 @@ body {
     background: white;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
 }
 
 /* ------------------------------books */
