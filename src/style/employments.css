@@ -7,14 +7,10 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-.employment h2 {
-    background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 5px 0px 5px 20px;
-}
+
 .wrapp_employment {
     width: 100%;
     height: 100%;
-    border-top: 5px solid rgba(184, 184, 192, 0.219);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

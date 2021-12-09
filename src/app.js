@@ -9,7 +9,7 @@ import smt from "./icon/smt.png";
 import "./style.css";
 import { getPixel } from "./style/pixel/pixel.js";
 const ar = document.querySelector(".frame img");
-
+// const header = document.querySelector("header");
 const links = {
     mail: mail,
     number: number,
@@ -34,3 +34,6 @@ document.body.onload = () => {
     });
     getPixel();
 };
+
+window.requestAnimationFrame(getPixel);
+// window.addEventListener("resize", deb, false);

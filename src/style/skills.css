@@ -7,15 +7,11 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-.skills h2 {
-    background: linear-gradient(to left, rgb(245, 245, 245), white);
-    padding: 5px 0px 5px 20px;
-}
+
 .stack_technology {
     width: 100%;
     height: 100%;
     padding: 10px 10px 10px 20px;
-    border-top: 5px solid rgba(184, 184, 192, 0.219);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

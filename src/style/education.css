@@ -5,12 +5,7 @@
     height: 100%;
     grid-area: education;
 }
-/* .education h2 {
-    padding: 5px 0px 5px 20px;
-    display: block;
-    width: 100%;
-    background: linear-gradient(to right, rgb(245, 245, 245), white);
-} */
+
 .education_info {
     padding: 0 20px;
     display: flex;
@@ -18,8 +13,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* text-align: center; */
-    /* border-top: 5px solid rgba(184, 184, 192, 0.589); */
     width: 100%;
 }
 .education_info span {

@@ -18,14 +18,6 @@
     line-height: 1.3em;
     color: #003147;
 }
-h2 {
-    display: block;
-    background: rgba(255, 255, 255, 0.795);
-    font-size: 17pt;
-}
-.element {
-    position: relative;
-}
 
 body {
     background: radial-gradient(purple, cyan);
@@ -34,6 +26,7 @@ body {
     align-items: center;
 }
 .wrapper {
+    background: white;
     position: relative;
     max-width: 21cm;
     max-height: 29.7cm;
@@ -43,18 +36,6 @@ body {
     grid-template-areas: "head body";
     grid-template-rows: 100%;
     grid-template-columns: 3fr 5fr;
-}
-.location {
-    padding-top: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px 20px;
-}
-.location span {
-    color: rgb(7, 110, 110);
-    font-size: 10pt;
-    font-weight: bold;
 }
 .head {
     position: relative;
@@ -75,10 +56,59 @@ body {
     grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    /* padding-right: 20px; */
-    /* column-gap: 20px; */
-    z-index: -2;
+    z-index: 2;
 }
+.main__body {
+    position: relative;
+    grid-area: body;
+    display: grid;
+    grid-template-areas:
+        "skills"
+        "employment"
+        "soft"
+        "hobbie";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    background: white;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    border-bottom: 5px solid rgba(184, 184, 192, 0.589);
+    position: relative;
+    z-index: 5;
+    display: block;
+    font-size: 17pt;
+    padding: 5px 0px 5px 20px;
+    background: linear-gradient(
+        to right,
+        rgb(238, 238, 238),
+        rgba(255, 255, 255, 0.452)
+    );
+}
+.element_body {
+    margin-left: 20px;
+    padding: 5px 0px 5px 0px;
+    background: linear-gradient(
+        to left,
+        rgb(238, 238, 238),
+        rgba(255, 255, 255, 0.452)
+    );
+}
+
+.location {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.location span {
+    color: rgb(7, 110, 110);
+    font-size: 10pt;
+    font-weight: bold;
+}
+
 .cube {
     box-sizing: border-box;
     top: 0;
@@ -86,7 +116,6 @@ body {
     right: 0;
     bottom: 0;
     position: absolute;
-    /* z-index: 11; */
 }
 
 /* --------------------------------about me */
@@ -102,32 +131,17 @@ body {
 .aboutMySelf h1 {
 }
 /* --------------------------------body */
-.main__body {
-    position: relative;
-    grid-area: body;
-    display: grid;
-    grid-template-areas:
-        "skills"
-        "employment"
-        "soft"
-        "hobbie";
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
-    background: white;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
 
 /* ------------------------------books */
-.soft-skills {
-    grid-area: soft;
-}
 @media (max-width: 760px) {
     .wrapper {
         border: none;
         grid-template-areas: "head" "body";
         grid-template-columns: 1fr;
+    }
+    h2 {
+        /* background: linear-gradient(to left, rgb(245, 245, 245), white); */
+        padding: 5px 0px 5px 20px;
     }
     .head {
         grid-template-columns: 1fr;
@@ -149,10 +163,6 @@ body {
         display: block;
         width: 90%;
     }
-    .skills h2 {
-        background: linear-gradient(to right, rgb(245, 245, 245), white);
-        padding: 5px 0px 5px 20px;
-    }
 
     .stack_technology {
         display: flex;
@@ -171,7 +181,6 @@ body {
     .wrapp_employment {
         width: 100%;
         height: 100%;
-        border-top: 5px solid rgba(184, 184, 192, 0.589);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

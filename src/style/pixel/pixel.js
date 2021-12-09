@@ -1,16 +1,34 @@
 import { createPixel } from "./helper.js";
 
-export function getPixel(element = "header") {
-    const $el = document.querySelector(`${element}`);
-    const cube = document.createElement("div");
-    cube.className = "cube";
-    cube.style.background = "rgba(125,125,125,0.1)";
-    cube.style.position = "absolute";
+const $el = document.querySelector(".head");
+const cube = document.createElement("div");
+cube.className = "cube";
+cube.style.background = "rgba(125,125,125,0.1)";
+cube.style.position = "absolute";
+
+$el.append(cube);
+export function getPixel() {
     const XY = parseFloat(getComputedStyle($el).height) / 60;
     cube.style.width = XY + "px";
     cube.style.height = XY + "px";
     let widthEl = parseFloat(getComputedStyle($el).width);
     let heightEl = parseFloat(getComputedStyle($el).height);
     cube.style.boxShadow = createPixel(widthEl, heightEl, XY);
-    $el.append(cube);
 }
+function debounce(func, wait, immediate) {
+    let timeout;
+    return () => {
+        const context = this,
+            args = arguments;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+window.addEventListener("resize", debounce(getPixel, 200, false), false);
