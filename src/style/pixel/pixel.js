@@ -5,7 +5,6 @@ const cube = document.createElement("div");
 cube.className = "cube";
 cube.style.background = "rgba(125,125,125,0.1)";
 cube.style.position = "absolute";
-
 $el.append(cube);
 export function getPixel() {
     const XY = parseFloat(getComputedStyle($el).height) / 60;
@@ -17,7 +16,7 @@ export function getPixel() {
 }
 function debounce(func, wait, immediate) {
     let timeout;
-    return () => {
+    return !(() => {
         const context = this,
             args = arguments;
         const later = function () {
@@ -28,7 +27,17 @@ function debounce(func, wait, immediate) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
-    };
+    })();
 }
+const ro = new ResizeObserver((entries) => {
+    for (let entry of entries) {
+        if (entry.contentRect.width) {
+            debounce(getPixel, 1000, false);
+        }
+    }
+});
 
-window.addEventListener("resize", debounce(getPixel, 200, false), false);
+// мы можем следить за любым количеством элементов
+ro.observe($el);
+
+// window.addEventListener("resize", debounce(getPixel, 500, false), false);

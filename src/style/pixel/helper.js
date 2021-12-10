@@ -5,10 +5,8 @@ export function createPixel(widthConteiner, heightConteiner, XY) {
             str += `rgba(125,125,125,${(
                 createRandomMinMax(20, 50) / getRandom()
             ).toFixed(2)}) ${i}px ${z}px,`;
-            // console.log(createRandomMinMax(20, 50) / getRandom());
         }
     }
-    // console.log(str.length);
     return str.slice(0, str.length - 1);
 }
 
