@@ -387,25 +387,22 @@ template {
     align-items: flex-start;
 }
 .contact li {
-    font-size: 11pt;
     list-style: none;
     display: flex;
     width: 100%;
     height: 40px;
     justify-content: flex-start;
     align-items: center;
-    color: coral;
 }
 .contact a :visited {
     color: inherit;
 }
 
 .contact li img {
-    margin: 0px 10px;
+    margin: 0px 10px 0px 0px;
     display: block;
     width: 25px;
     height: 25px;
-    image-resolution: 25px;
 }
 
 .contact a {
@@ -413,18 +410,17 @@ template {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 12pt;
-    font-weight: bold;
     text-shadow: 1px 1px 2px rgba(122, 134, 134, 0.418);
 }
 .contact a span {
+    /* font-weight: bold; */
+    font-size: calc(12pt - 0.5px);
     color: #240f36;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s linear;
 }
 .contact a span:hover {
     color: rgb(19, 129, 180);
-    transform: translate(-1px, -1px);
+    transform: scale(1.03, 1.03);
     text-shadow: 6px 6px 3px rgba(68, 64, 64, 0.178);
 }
 
@@ -487,6 +483,7 @@ template {
     box-shadow: 0px 0px 5px -1px rgb(139, 143, 230);
     border-radius: 5px;
     background: rgb(255, 255, 255);
+    z-index: 10;
 }
 .range1:after {
     border-radius: 5px;
@@ -667,7 +664,8 @@ template {
 }
 .soft_wrapp ul span {
     color: rgb(24, 108, 141);
-    text-shadow: 0px 0px 2px rgb(150, 146, 146);
+    font-weight: bold;
+    /* text-shadow: 0px 0px 2px rgb(150, 146, 146); */
     display: inline-flex;
     width: max-content;
     padding: 0 2px;
@@ -749,7 +747,6 @@ body {
         "soft"
         "hobbie";
     grid-template-columns: 100%;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
     grid-template-rows: auto;
     background: white;
     justify-content: center;
@@ -760,7 +757,7 @@ h2 {
     position: relative;
     z-index: 5;
     display: block;
-    font-size: 17pt;
+    font-size: 16pt;
     padding: 5px 0px 5px 20px;
     background: linear-gradient(
         to right,
@@ -798,8 +795,6 @@ h2 {
     right: 0;
     bottom: 0;
     position: absolute;
-    /* background: yellow; */
-    /* transition: box-shadow 1s infinite linear forwards; */
 }
 
 /* --------------------------------about me */
@@ -823,7 +818,6 @@ h2 {
 }
 .aboutMySelf span {
     color: #003147;
-    font-size: 12pt;
     padding: 2px;
     text-indent: 10px;
     display: flex;
@@ -837,11 +831,9 @@ h2 {
 /* ------------------------------books */
 @media (max-width: 760px) {
     .wrapper {
-        /* height: 100vh; */
         border: none;
         grid-template-areas: "head" "body";
         grid-template-columns: auto;
-        /* grid-auto-rows: auto; */
     }
     h2 {
         padding: 5px 0px 5px 20px;
