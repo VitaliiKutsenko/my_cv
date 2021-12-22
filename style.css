@@ -413,15 +413,17 @@ template {
     text-shadow: 1px 1px 2px rgba(122, 134, 134, 0.418);
 }
 .contact a span {
-    /* font-weight: bold; */
     font-size: calc(12pt - 0.5px);
-    color: #240f36;
+    color: rgb(21, 90, 90);
     transition: 0.2s linear;
 }
 .contact a span:hover {
     color: rgb(19, 129, 180);
     transform: scale(1.03, 1.03);
     text-shadow: 6px 6px 3px rgba(68, 64, 64, 0.178);
+}
+.contact a :visited {
+    color: none;
 }
 
 /* --------------------------------Education */
@@ -431,24 +433,31 @@ template {
     height: 100%;
     grid-area: education;
 }
-
-.education_info {
+.education_wrap{
+    width: 100%;
+    height: 80%;
     padding: 0 20px;
     display: flex;
-    flex-direction: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.education_info {
+    /*padding: 0 20px;*/
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
 }
 .education_info span {
+    color: #003147;
     display: block;
     padding: 5px 0;
     font-size: 12pt;
 }
 .education_info :nth-child(1) {
     text-align: center;
-    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.425);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 .language {
@@ -463,24 +472,25 @@ template {
 .language_wrap {
     width: 100%;
     height: 100%;
-    padding: 0px 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     list-style: none;
 }
 .language_wrap li {
+    color: rgb(31, 95, 121);
     font-weight: 550;
-    margin-top: 5px;
+    margin: 5px 0;
 }
-
 .language_range {
     display: flex;
     align-items: center;
     position: relative;
     margin-bottom: 5px;
     width: 80%;
-    height: 20px;
-    box-shadow: 0px 0px 5px -1px rgb(139, 143, 230);
+    height: 15px;
+    box-shadow: 0 0 0 1px rgba(139, 143, 230, 0.479);
     border-radius: 5px;
     background: rgb(255, 255, 255);
     z-index: 10;
@@ -489,24 +499,24 @@ template {
     border-radius: 5px;
     content: "";
     width: 40%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #04245fdc;
+    height: 15px;
+    box-shadow: inset 0 0 15px 5px rgba(53, 138, 141, 0.801);
     position: absolute;
 }
 .range2:after {
     border-radius: 5px;
     content: "";
     width: 80%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #04245fdc;
+    height: 15px;
+    box-shadow: inset 0 0 15px 5px rgba(53, 138, 141, 0.801);
     position: absolute;
 }
 .range3:after {
     border-radius: 5px;
     content: "";
     width: 60%;
-    height: 20px;
-    box-shadow: inset 0px 0px 15px 5px #04245fdc;
+    height: 15px;
+    box-shadow: inset 0 0 15px 5px rgba(53, 138, 141, 0.801);
     position: absolute;
 }
 
@@ -532,6 +542,7 @@ template {
 }
 
 .skills li {
+    color: rgb(31, 95, 121);
     flex-grow: 1;
     font-size: 16px;
     box-shadow: inset 0px 0px 15px 1px rgba(180, 182, 187, 0.267);
@@ -556,11 +567,12 @@ template {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 10px;
+
 }
 .employment li {
-    margin: 0px 0px 0px 20px;
+    margin: 0 0 0 20px;
     list-style: none;
 }
 .employment li::before {
@@ -598,7 +610,7 @@ template {
 
 .manager {
     padding: 5px 10px;
-    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.425);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 .engineer {
     padding: 5px 10px;
@@ -620,11 +632,12 @@ template {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
     justify-content: center;
     list-style: none;
 }
 .hobbie ul li {
+    color: rgb(31, 95, 121);
     text-align: center;
     flex-grow: 1;
     font-size: 16px;
@@ -660,12 +673,14 @@ template {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 2px 2px -1px rgba(138, 137, 137, 0.425);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.soft_wrapp ul:nth-last-child(1){
+    border-bottom: none;
 }
 .soft_wrapp ul span {
-    color: rgb(24, 108, 141);
+    color: rgb(31, 95, 121);
     font-weight: bold;
-    /* text-shadow: 0px 0px 2px rgb(150, 146, 146); */
     display: inline-flex;
     width: max-content;
     padding: 0 2px;
@@ -674,7 +689,7 @@ template {
     background: white;
 }
 .soft_wrapp li {
-    margin: 0px 0px 0px 20px;
+    margin: 0 0 0 20px;
     list-style: none;
 }
 .soft_wrapp li::before {
@@ -694,7 +709,7 @@ template {
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     font-size: 12pt;
-    line-height: 1.3em;
+    /*line-height: 1.3em;*/
     color: #003147;
 }
 
@@ -738,6 +753,7 @@ body {
     z-index: 2;
 }
 .main__body {
+    width: 100%;
     position: relative;
     grid-area: body;
     display: grid;
@@ -746,7 +762,7 @@ body {
         "employment"
         "soft"
         "hobbie";
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     background: white;
     justify-content: center;
@@ -758,7 +774,7 @@ h2 {
     z-index: 5;
     display: block;
     font-size: 16pt;
-    padding: 5px 0px 5px 20px;
+    padding: 5px 0 5px 20px;
     background: linear-gradient(
         to right,
         rgb(238, 238, 238),
@@ -767,7 +783,7 @@ h2 {
 }
 .element_body {
     margin-left: 20px;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
     background: linear-gradient(
         to left,
         rgb(238, 238, 238),
@@ -776,14 +792,13 @@ h2 {
 }
 
 .location {
-    padding-top: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 5px 0;
 }
 .location span {
-    color: rgb(7, 110, 110);
+    color: rgb(53, 138, 141);
     font-size: 10pt;
     font-weight: bold;
 }
@@ -799,13 +814,12 @@ h2 {
 
 /* --------------------------------about me */
 .aboutMySelf {
-    padding: 0 20px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 10px;
+    padding: 0 20px 10px;
     row-gap: 10px;
     align-items: center;
 }
@@ -819,12 +833,10 @@ h2 {
 .aboutMySelf span {
     color: #003147;
     padding: 2px;
-    text-indent: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 1;
     flex-grow: 0;
-    font-weight: bold;
 }
 /* --------------------------------body */
 
@@ -836,7 +848,7 @@ h2 {
         grid-template-columns: auto;
     }
     h2 {
-        padding: 5px 0px 5px 20px;
+        padding: 5px 0 5px 20px;
     }
     .element_body {
         border-bottom: 5px solid rgba(184, 184, 192, 0.589);
@@ -844,7 +856,7 @@ h2 {
         z-index: 5;
         display: block;
         font-size: 17pt;
-        padding: 5px 0px 5px 20px;
+        padding: 5px 0 5px 20px;
         background: linear-gradient(
             to right,
             rgb(238, 238, 238),
@@ -903,17 +915,15 @@ h2 {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         list-style: none;
         padding: 10px 20px;
     }
     .manager {
         padding: 0;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
     }
     .engineer {
         padding: 0;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.096);
     }
     .soft_wrapp ul span {
         background: linear-gradient(to right, rgb(245, 245, 245), white 10%);
@@ -921,19 +931,38 @@ h2 {
 }
 @media print {
     @page {
-        size: auto; /* auto is the initial value */
-        margin: 0mm; /* this affects the margin in the printer settings */
+        size: 21cm 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+        /*size: auto; !* auto is the initial value *!*/
+        /*margin: 0; !* this affects the margin in the printer settings *!*/
+    }
+    .cube {
+        display: none;
     }
     .wrapper {
         position: relative;
         max-width: 21cm;
         max-height: 29.7cm;
-        margin: 0 auto;
-        border: 1px solid black;
+        /*padding: 20px;*/
+        /*border: 1px solid black;*/
         display: grid;
         grid-template-areas: "head body";
-        grid-template-rows: 100%;
+        grid-template-rows: 100vh;
         grid-template-columns: 3fr 5fr;
     }
+
+    .aboutMySelf{
+        padding: 0 20px;
+    }
+    .element_body {
+        margin-left: 20px;
+        padding: 5px 0 5px 0;
+        background: linear-gradient(
+                to left,
+                rgb(238, 238, 238),
+                rgba(255, 255, 255, 0.452)
+        );
+    }
+
 }
 
